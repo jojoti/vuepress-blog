@@ -1,0 +1,14 @@
+{
+  "name": "https://github.com/jojoti/blog-vuepress-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "apache",
+  "dependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src"
+  }
+}
