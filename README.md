@@ -1,4 +1,4 @@
-# blog starter, [像这样的博客](https://jojoti.github.io/)
+# blog starter [像这样的博客](https://jojoti.github.io/)
 
 ## License
 
