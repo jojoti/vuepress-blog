@@ -1,5 +1,5 @@
 {
-  "name": "https://github.com/jojoti/blog-vuepress-starter",
+  "name": "jojoti.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "vuepress": "^1.8.2"
   },
   "scripts": {
-    "docs:dev": "vuepress dev src",
-    "docs:build": "vuepress build src"
+    "docs:dev": "vuepress dev blog",
+    "docs:build": "vuepress build blog"
   }
 }

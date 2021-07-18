@@ -1,1 +1,6 @@
 .idea
+*.iml
+node_modules
+*.vswp
+_vnote.json
+_v_recycle_bin

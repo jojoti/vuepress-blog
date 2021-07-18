@@ -1,0 +1,47 @@
+# rf:
+# https://github.com/deliangyang/sntflyv.github.io/blob/master/.github/workflows/node.js.yml
+# https://github.com/actions/starter-workflows/tree/f6cef1d4ee78102ca76d6a82d329316be127edc7/.github/workflows
+name: Vuepress CI
+
+on:
+  push:
+    branches: [ master ]
+    # https://docs.github.com/cn/actions/reference/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - './blog/**'
+  pull_request:
+    branches: [ master ]
+    # https://docs.github.com/cn/actions/reference/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - './blog/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm install
+      - run: yarn docs:build
+      #      - run: cp CNAME blog/.vuepress/dist
+      - name: commit push
+        run: |
+          rm -rf .git
+          cd blog/.vuepress/dist
+          git config --global init.defaultBranch gh-pages
+          git init
+          git branch -m gh-pages
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git config --global user.name 'jojoti'
+          git config --global user.email 'id233233@outlook.com'
+          git add .
+          git commit -m "github action auto build page"
+          git push --set-upstream origin gh-pages -f
