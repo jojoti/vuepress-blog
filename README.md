@@ -4,8 +4,8 @@
 
 ### 1.0. 准备个人仓库
 
-1. 仓库名字`username.github.io`, 例如`jojoti.github.io`
-2. 打开仓库设置: setting -> pages -> source -> `gh-pages` - `root`
+1. 个人博客,仓库名字满足以下约束`username.github.io`, 例如`jojoti.github.io`
+2. 项目文档,仓库名字随意
 
 ### 1.1. git checkout
 
@@ -37,7 +37,9 @@
 
 ### 1.3. 大工告成
 
-+ `git push --mirror`
+1. `git push --mirror`
+2. 打开仓库设置: setting -> pages -> source -> select `gh-pages` -> `save`
+3. 点击 Your site is ready to be published at https://jojoti.github.io/blog-vuepress-starter/
 
 ### 1.4. 特别的自定义域名
 
