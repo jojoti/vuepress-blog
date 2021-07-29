@@ -1,14 +1,20 @@
-# vuepress blog starter [像这样的博客](https://jojoti.github.io/)
+# blog vuepress starter <a href="https://jojoti.github.io/" target="_blank">像这样的博客</a>
 
 ## 1.构建步骤
 
-### 1.1仓库 ok
+### 1.0. 准备一个个人仓库
+
+1. 仓库名字`username.github.io`, 例如`jojoti.github.io`
+2. 打开仓库设置: setting -> pages -> source -> `gh-pages` - `root`
+
+### 1.1. git checkout
 
 0. 确保`git`环境`ssh`等ok
-1. `git clone git@github.com:jojoti/blog-vuepress-starter.git`
+1. `git clone https://github.com/jojoti/blog-vuepress-starter.git`
 2. `git remote rm origin`
 3. `git remote add origin [yours blog git address]`
-4. `git pull origin master --allow-unrelated-histories`
+   例如: `git remote add origin git@github.com:jojoti/jojoti.github.io.git`
+4. `git pull origin main --allow-unrelated-histories`
 
 ### 1.2. vuepress 配置
 
@@ -18,8 +24,10 @@
    打开 `./blog/.vuepress/config.js` [详细配置参考](https://vuepress.vuejs.org/zh/config/)
 
 3. `必须`修改的配置:
-    + `themeConfig.docsRepo` 修改为自己的github地址
-    + `nav` 里找到留言修改仓库 issue 地址
+    + `themeConfig.docsRepo`
+      修改为自己的github地址, [找不到点击这里](https://github.com/jojoti/blog-vuepress-starter/blob/3ac8038c7204a3e5903abdc3f9f2464ec8e7b970/blog/.vuepress/config.js#L26)
+    + `nav` 里找到留言修改仓库 `issue`
+      地址, [找不到点击这里](https://github.com/jojoti/blog-vuepress-starter/blob/3ac8038c7204a3e5903abdc3f9f2464ec8e7b970/blog/.vuepress/config.js#L52)
 
 4. 修改一些显示配置:
     + `title`
@@ -31,9 +39,15 @@
 
 + `git push --mirror`
 
-## 2.本地调试
+### 1.4. 特别的自定义域名
 
-1. 确保`docker``docker-compose`环境ok
+1. [修改本地代码配置,去掉注释](https://github.com/jojoti/blog-vuepress-starter/blob/3ac8038c7204a3e5903abdc3f9f2464ec8e7b970/.github/workflows/vuepress.yml#L34)
+2. 修改根目录,[CNAME](./CNAME)文件写上自己的域名, [例如](https://github.com/deliangyang/sntflyv.github.io/blob/master/CNAME)
+3. 去域名运营商添加CNAME记录指向 `username.github.io`
+
+## 2. 本地调试
+
+1. 确保 `docker` `docker-compose` 环境ok
 2. docker-compose up
 3. 浏览器打开: [http://127.0.0.1:8081](http://127.0.0.1:8081)
 
