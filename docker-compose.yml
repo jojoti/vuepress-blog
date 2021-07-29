@@ -2,13 +2,13 @@ version: '3'
 
 services:
 
-  blog:
+  docs:
     build: .
     restart: always
     ports:
       - "127.0.0.1:8080:8080"
     volumes:
-      - ./blog:/home/blog/blog:rw
+      - ./docs:/home/docs/docs:rw
     command:
       - /bin/sh
       - -c

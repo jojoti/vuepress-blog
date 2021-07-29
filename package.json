@@ -1,14 +1,14 @@
 {
   "name": "jojoti.github.io",
   "version": "1.0.0",
-  "description": "hello blog",
+  "description": "hello docs",
   "main": "index.js",
   "license": "CC BY-NC-SA 4.0",
   "dependencies": {
     "vuepress": "^1.8.2"
   },
   "scripts": {
-    "docs:dev": "vuepress dev blog",
-    "docs:build": "vuepress build blog"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
