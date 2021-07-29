@@ -2,19 +2,19 @@
 
 ## 1.构建步骤
 
-### 1.0. 准备一个个人仓库
+### 1.0. 准备个人仓库
 
 1. 仓库名字`username.github.io`, 例如`jojoti.github.io`
 2. 打开仓库设置: setting -> pages -> source -> `gh-pages` - `root`
 
 ### 1.1. git checkout
 
-0. 确保`git`环境`ssh`等ok
-1. `git clone https://github.com/jojoti/blog-vuepress-starter.git`
-2. `git remote rm origin`
-3. `git remote add origin [yours blog git address]`
+1. 确保`git`环境`ssh`等ok
+2. `git clone https://github.com/jojoti/blog-vuepress-starter.git`
+3. `git remote rm origin`
+4. `git remote add origin [yours blog git address]`
    例如: `git remote add origin git@github.com:jojoti/jojoti.github.io.git`
-4. `git pull origin main --allow-unrelated-histories`
+5. `git pull origin main --allow-unrelated-histories`
 
 ### 1.2. vuepress 配置
 
