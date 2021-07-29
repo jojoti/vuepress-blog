@@ -49,7 +49,7 @@
 
 1. 确保 `docker` `docker-compose` 环境ok
 2. docker-compose up , 第一次比较慢, 大约300s, 臃肿的`nodejs`, 体谅一下
-3. 浏览器打开: [http://127.0.0.1:8080](http://127.0.0.1:8081)
+3. 浏览器打开: [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ## License CC BY-NC-SA 4.0
 
