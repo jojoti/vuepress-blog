@@ -2,7 +2,7 @@
 
 ## 1.构建步骤
 
-### 1.0. 准备一个个人仓库
+### 1.0. 准备个人仓库
 
 1. 仓库名字`username.github.io`, 例如`jojoti.github.io`
 2. 打开仓库设置: setting -> pages -> source -> `gh-pages` - `root`
