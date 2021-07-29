@@ -1,9 +1,9 @@
 {
   "name": "jojoti.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "hello blog",
   "main": "index.js",
-  "license": "apache",
+  "license": "CC BY-NC-SA 4.0",
   "dependencies": {
     "vuepress": "^1.8.2"
   },

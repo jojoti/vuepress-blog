@@ -1,19 +1,20 @@
 version: '3'
+
 services:
 
   blog:
+#    build: .
     image: node:15
     restart: always
     ports:
       - "127.0.0.1:8081:8080"
     volumes:
-      - ./:/home/blog:rw
+#      - ./blog:/home/blog/blog:rw
+      - ./:/home/blog/:rw
     working_dir: /home/blog
-    # npm install -g vuepress
     command:
-    - /bin/sh
-    - -c
-    - |
-      npm install
-      npx vuepress dev /home/blog/blog
-      npx vuepress build /home/blog/blog
+      - /bin/sh
+      - -c
+      - |
+        yarn install
+        yarn docs:dev
