@@ -3,18 +3,14 @@ version: '3'
 services:
 
   blog:
-#    build: .
-    image: node:15
+    build: .
     restart: always
     ports:
-      - "127.0.0.1:8081:8080"
+      - "127.0.0.1:8080:8080"
     volumes:
-#      - ./blog:/home/blog/blog:rw
-      - ./:/home/blog/:rw
-    working_dir: /home/blog
+      - ./blog:/home/blog/blog:rw
     command:
       - /bin/sh
       - -c
       - |
-        yarn install
         yarn docs:dev
