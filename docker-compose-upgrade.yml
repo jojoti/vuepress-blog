@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  docs:
+    image: node:15
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./:/home/docs/:rw
+    working_dir: /home/docs/
+    command:
+      - /bin/sh
+      - -c
+      - |
+        rm -rf package.json.lock
+        npm install
+        rm -rf yarn.lock
+        yarn install

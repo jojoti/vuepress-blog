@@ -1,6 +1,7 @@
-# vuepress starter 
+# vuepress starter
 
 ## 0. 做什么
+
 + <a href="https://jojoti.github.io/" target="_blank">像这样的博客</a>
 + [项目文档](https://github.com/jojoti/vuepress-starter)
 
@@ -57,6 +58,10 @@
 1. 确保 `docker` `docker-compose` 环境ok
 2. docker-compose up , 第一次比较慢, 大约300s, 臃肿的`nodejs`, 体谅一下
 3. 浏览器打开: [http://127.0.0.1:8080](http://127.0.0.1:8080)
+
+## 3. 升级 vuepress 版本
+
++ `docker-compose -f ./docker-compose-upgrade.yml up`
 
 ## License CC BY-NC-SA 4.0
 

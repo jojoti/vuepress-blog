@@ -3,19 +3,14 @@ version: '3'
 services:
 
   docs:
-#    build: .
-    image: node:15
+    build: .
     restart: always
     ports:
       - "127.0.0.1:8080:8080"
     volumes:
-#      - ./docs:/home/docs/docs:rw
-      - ./:/home/docs/:rw
-    working_dir: /home/docs/
+      - ./docs:/home/docs/docs:rw
     command:
       - /bin/sh
       - -c
       - |
-        npm install
-        yarn install
         yarn docs:dev
