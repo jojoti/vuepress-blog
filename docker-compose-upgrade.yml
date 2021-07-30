@@ -16,5 +16,7 @@ services:
       - |
         rm -rf package.json.lock
         npm install
+        rm -rf ./node_modules
         rm -rf yarn.lock
         yarn install
+        rm -rf ./node_modules
